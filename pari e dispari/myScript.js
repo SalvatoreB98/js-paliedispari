@@ -38,6 +38,7 @@ else {
     console.log("l'utente ha perso");
 }
 
+// FUNZIONI
 function generaNumeroRandom() {
     var numero;
     numero = Math.floor(Math.random() * 6 + 1);
