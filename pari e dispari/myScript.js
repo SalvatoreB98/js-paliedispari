@@ -5,7 +5,7 @@ var numeroRandomPC;
 var somma;
 
 pariDispari = prompt("inserisci ' pari ' o ' dispari '");
-numeroUtente = parseInt(prompt("inserire un numero da 1 a 6"));
+numeroUtente = parseInt(prompt("inserire un numero da 1 a 5"));
 // CONVERSIONE INPUT IN BOOLEANO
 if (pariDispari == "pari") {
     isPariUtente = true;
@@ -45,7 +45,7 @@ else {
 // FUNZIONI
 function generaNumeroRandom() {
     var numero;
-    numero = Math.floor(Math.random() * 6 + 1);
+    numero = Math.floor(Math.random() * 5 + 1);
     parseInt(numero);
     return numero;
 }
