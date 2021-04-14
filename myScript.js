@@ -1,26 +1,17 @@
-var parolautente;
+var parolaUtente;
 var arrayParola;
-parolautente = prompt("Inserisci parola palindroma da verificare")
-parolautente.toString();
-arrayParola = parolautente.split("");
+parolaUtente = prompt("Inserisci parola palindroma da verificare");
+parolaUtente.toString;
+console.log(isPalindroma(parolaUtente));
 
 
-console.log(arrayParola);
 
 
-    var corrispondenza;
-    var i;
-    while (corrispondenza = true || i ) {
-        for (var j = arrayParola.length; j > 0; i--){
-            if(arrayParola[i]===arrayParola[j]){
-                corrispondenza = true;
-            }
-            else{
-                corrispondenza = false
-            }
-        }
+function isPalindroma(parola) {
+    var stringaInvertita = "";
+    for (var i = parola.length-1; i >= 0; i--){
+         stringaInvertita += parola[i];           
     }
-
-    function isPalindroma(array){
-
-    }
+    console.log(stringaInvertita)
+    return stringaInvertita === parola;
+}
