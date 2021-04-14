@@ -2,7 +2,11 @@ var parolaUtente;
 var arrayParola;
 parolaUtente = prompt("Inserisci parola palindroma da verificare");
 parolaUtente.toString;
-console.log(isPalindroma(parolaUtente));
+if(isPalindroma(parolaUtente)){
+ console.log("la parola è palindroma");
+}else{
+console.log("la parola non è palindroma");
+}
 
 
 
