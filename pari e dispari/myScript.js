@@ -6,9 +6,6 @@ var somma;
 
 pariDispari = prompt("inserisci ' pari ' o ' dispari '");
 numeroUtente = parseInt(prompt("inserire un numero da 1 a 6"));
-
-console.log("il numero del giocatore è " + numeroUtente);
-
 // CONVERSIONE INPUT IN BOOLEANO
 if (pariDispari == "pari") {
     isPariUtente = true;
@@ -18,24 +15,31 @@ else if (pariDispari == "dispari") {
     isPariUtente = false;
     console.log("l'utente ha scelto dispari")
 }
-else{
-    console.log("ATTENZIONE! INSERIRE CORRETTAMENTE LA PAROLA ' pari ' O ' dispari");
+else {
+    console.log("ATTENZIONE! Inserire correttamente la parola ' pari ' o ' dispari");
 }
 
-// GENERA NUMERO RANDOM TRAMITE FUNZIONE
-numeroRandomPC = generaNumeroRandom();
-console.log("il numero del pc è " + numeroRandomPC);
-
-//SOMMA IL NUMERO DELL'UTENTE E DEL PC
-somma = numeroUtente + numeroRandomPC;
-console.log("la somma è " + somma);
-
-// VERIFICA TRAMITE LA NOSTRA FUNZIONE SE LA SOMMA E' PARI O DISPARI
-if (isPari(somma) == isPariUtente) {
-    console.log("l'utente ha vinto");
+// CONTROLLA INPUT
+if (Number.isNaN(numeroUtente)) {
+    console.log("ATTENZIONE! Verificare di aver inserito un numero")
 }
 else {
-    console.log("l'utente ha perso");
+    console.log("il numero del giocatore è " + numeroUtente);
+    // GENERA NUMERO RANDOM TRAMITE FUNZIONE
+    numeroRandomPC = generaNumeroRandom();
+    console.log("il numero del pc è " + numeroRandomPC);
+
+    //SOMMA IL NUMERO DELL'UTENTE E DEL PC
+    somma = numeroUtente + numeroRandomPC;
+    console.log("la somma è " + somma);
+
+    // VERIFICA TRAMITE LA NOSTRA FUNZIONE SE LA SOMMA E' PARI O DISPARI
+    if (isPari(somma) == isPariUtente) {
+        console.log("l'utente ha vinto");
+    }
+    else {
+        console.log("l'utente ha perso");
+    }
 }
 
 // FUNZIONI
