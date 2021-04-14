@@ -7,6 +7,7 @@ console.log(isPalindroma(parolaUtente));
 
 
 
+// FUNZIONI
 function isPalindroma(parola) {
     var stringaInvertita = "";
     for (var i = parola.length-1; i >= 0; i--){
